@@ -2,37 +2,46 @@ package telas;
 import components.*;
 import components.Frame;
 import components.Label;
-import org.w3c.dom.Text;
 
 import javax.swing.*;
-import javax.swing.plaf.basic.BasicPopupMenuUI;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
 
-public class Menu {
+public class Menu extends Frame{
     // Create a construcor
     public Menu(){
-        Frame screenMenu = new Frame();
-        Textfield login = new Textfield(120, 200, 100, 50, "username");
-        Passwordfield senha = new Passwordfield(120, 300, 100,50);
-        Botao btn1 = new Botao(120, 400, 100, 50, "Entrar");
-        Label label = new Label(100,60,200,100, "Faça o login no Sistema");
-        Label label2 = new Label(148, 130, 200, 100, "Usuário");
-        Label label3 = new Label(148, 233, 200, 100, "Senha");
-        screenMenu.add(label);
-        screenMenu.add(label2);
-        screenMenu.add(label3);
-        screenMenu.add(btn1);
-        screenMenu.add(login);
-        screenMenu.add(senha);
+        Label label = new Label(0,0,400,700);
+        label.setIcon(new ImageIcon("C:\\Users\\47190845836\\Desktop\\javaLeo\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\TelaPrincipal.png"));
+        Botao user = new Botao(89, 235, 211, 39, "Cadastrar Usuário");
+        Botao restaurant = new Botao(89, 337, 211, 39, "Cadastrar Restaurante");
+        Botao login = new Botao(89, 439, 211, 39, "Entrar");
+        add(user);
+        add(login);
+        add(restaurant);
+        add(label);
+        setVisible(true);
 
-        btn1.addActionListener(new ActionListener() {
+        user.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Second second = new Second();
-                screenMenu.dispose();
+                new Cad_Usuario();
+                dispose();
+            }
+        });
+
+        restaurant.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Cad_Restaurant();
+                dispose();
+            }
+        });
+
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Login();
+                dispose();
             }
         });
     }

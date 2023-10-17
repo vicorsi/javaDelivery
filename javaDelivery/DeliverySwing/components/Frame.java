@@ -5,9 +5,8 @@ import java.awt.*;
 
 public class Frame extends JFrame {
     public Frame(){
-        setVisible(true);
-        setSize(350, 650);
+        setSize(399, 700);
+        setResizable(false);
         setLayout(null);
-        getContentPane().setBackground(Color.RED);
     }
 }
