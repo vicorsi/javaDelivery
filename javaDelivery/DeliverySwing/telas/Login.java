@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Login extends Frame {
+
     public Login(){
         Label label = new Label(0,0,400,700);
         label.setIcon(new ImageIcon("C:\\Users\\47190845836\\Desktop\\javaLeo\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\Login.png"));
@@ -28,6 +29,14 @@ public class Login extends Frame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Menu();
+                dispose();
+            }
+        });
+
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Pedido();
                 dispose();
             }
         });
