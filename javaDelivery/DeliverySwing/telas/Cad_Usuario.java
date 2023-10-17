@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 public class Cad_Usuario extends Frame{
     public Cad_Usuario(){
         Label label = new Label(0,0,400,700);
-        label.setIcon(new ImageIcon("C:\\Users\\47190845836\\Desktop\\javaLeo\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\CadastrarUsuario.png"));
+        label.setIcon(new ImageIcon("C:\\Users\\ct67ca\\Desktop\\javinha\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\CadastrarUsuario.png"));
         Textfield nome = new Textfield(89, 235, 211, 39);
         Textfield cpf = new Textfield(89, 307, 211, 39);
         Textfield senha = new Textfield(89, 380, 211, 39);
@@ -35,6 +35,13 @@ public class Cad_Usuario extends Frame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Menu();
+                dispose();
+            }
+        });
+        btnOk.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Login();
                 dispose();
             }
         });

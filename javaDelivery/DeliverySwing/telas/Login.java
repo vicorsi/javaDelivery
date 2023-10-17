@@ -13,15 +13,15 @@ public class Login extends Frame {
 
     public Login(){
         Label label = new Label(0,0,400,700);
-        label.setIcon(new ImageIcon("C:\\Users\\47190845836\\Desktop\\javaLeo\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\Login.png"));
+        label.setIcon(new ImageIcon("C:\\Users\\ct67ca\\Desktop\\javinha\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\Login.png"));
         Textfield nome = new Textfield(95, 233, 211, 39);
         Textfield senha = new Textfield(95, 336, 211, 39);
-        Botao login = new Botao(155, 465, 91,39, "Login");
+        Botao logar = new Botao(155, 465, 91,39, "Logar");
         Botao btnBack = new Botao(320, 20, 50, 40, "<");
         add(btnBack);
         add(nome);
         add(senha);
-        add(login);
+        add(logar);
         add(label);
         setVisible(true);
 
@@ -33,7 +33,7 @@ public class Login extends Frame {
             }
         });
 
-        login.addActionListener(new ActionListener() {
+        logar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Pedido();
