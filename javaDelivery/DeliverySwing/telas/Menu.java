@@ -8,10 +8,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Menu extends Frame{
-    // Create a construcor
+    // Create a constructor
     public Menu(){
         Label label = new Label(0,0,400,700);
-        label.setIcon(new ImageIcon("C:\\Users\\47190845836\\Desktop\\javaLeo\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\TelaPrincipal.png"));
+        label.setIcon(new ImageIcon("C:\\Users\\ct67ca\\Desktop\\javinha\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\TelaPrincipal.png"));
         Botao user = new Botao(89, 235, 211, 39, "Cadastrar Usuário");
         Botao restaurant = new Botao(89, 337, 211, 39, "Cadastrar Restaurante");
         Botao login = new Botao(89, 439, 211, 39, "Entrar");
