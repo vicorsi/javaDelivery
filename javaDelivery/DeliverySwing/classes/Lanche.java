@@ -3,7 +3,6 @@ package classes;
 public class Lanche {
     private String nome;
     private Double preco;
-
     public Lanche(String nome, Double preco){
         this.nome = nome;
         this.preco = preco;
@@ -14,11 +13,9 @@ public class Lanche {
     public Double getPreco(){
         return preco;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     public void setPreco(Double preco) {
         this.preco = preco;
     }

@@ -17,7 +17,7 @@ public class Login extends Frame {
     public Login(){
 
         Label label = new Label(0,0,400,700);
-        label.setIcon(new ImageIcon("C:\\Users\\ct67ca\\Desktop\\javinha\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\Login.png"));
+        label.setIcon(new ImageIcon("C:\\Users\\47190845836\\Desktop\\javinha\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\Login.png"));
         Textfield nome = new Textfield(95, 233, 211, 39);
         Textfield senha = new Textfield(95, 336, 211, 39);
         Botao login = new Botao(155, 465, 91,39, "Login");
@@ -42,12 +42,14 @@ public class Login extends Frame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ArrayList<Usuario> usuarios = Aplicativo.getUsuarios();
-                if(usuarios.get(0).getNome().equals(nome.getText()) && usuarios.get(0).getSenha().equals(String.valueOf(senha.getSenha()))){
-                    System.out.println("Funcionou");
+                if(usuarios.get(0).getNome().equals(nome.getText()) && usuarios.get(0).getSenha().equals(String.valueOf(senha.getText()))){
+                    JOptionPane.showMessageDialog(Login.this, "Usuário logado com sucesso!", "Login", JOptionPane.INFORMATION_MESSAGE);
                     new Pedido();
                     dispose();
                 }else if(nome.getText().isEmpty() || senha.getText().isEmpty()) {
                     JOptionPane.showMessageDialog(Login.this, "Você deve preencher os campos para continuar", "Alerta", JOptionPane.ERROR_MESSAGE);
+                }else {
+                    JOptionPane.showMessageDialog(Login.this, "Dados inválidos!", "Alerta", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

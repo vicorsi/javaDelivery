@@ -18,7 +18,7 @@ public class Cad_Usuario extends Frame {
     public Cad_Usuario(){
 
         Label label = new Label(0,0,400,700);
-        label.setIcon(new ImageIcon("C:\\Users\\ct67ca\\Desktop\\javinha\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\CadastrarUsuario.png"));
+        label.setIcon(new ImageIcon("C:\\Users\\47190845836\\Desktop\\javinha\\javaDelivery\\javaDelivery\\DeliverySwing\\images\\CadastrarUsuario.png"));
         Textfield nome = new Textfield(89, 235, 211, 39);
         Textfield cpf = new Textfield(89, 307, 211, 39);
         Passwordfield senha = new Passwordfield(89, 380, 211, 39);
@@ -53,7 +53,7 @@ public class Cad_Usuario extends Frame {
                 else {
                     JOptionPane.showMessageDialog(Cad_Usuario.this, "Usuário cadastrado com sucesso!");
                     Usuario usuario = new Usuario(
-                            nome.getText(),eixoX.getText(),eixoY.getText(),cpf.getText(),senha.getText()
+                            nome.getText(),eixoX.getText(),eixoY.getText(),cpf.getText(),String.valueOf(senha.getPassword())
                     );
                     new Menu();
                     dispose();
