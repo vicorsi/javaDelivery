@@ -1,18 +1,9 @@
 package components;
-import classes.Aplicativo;
-import classes.Lanche;
-import classes.Restaurante;
 
-import javax.swing.*;
-import java.util.ArrayList;
+import javax.swing.JComboBox;
 
-public class Lista extends JPanel {
+public class Lista<T> extends JComboBox<T> {
     public Lista(int x, int y, int width, int height){
-        ArrayList<Lanche> restaurantes = Aplicativo.getLanches();
-
-        String[] restaurant = {};
-        JComboBox<String> comboBox = new JComboBox();
-        setBounds(x,y,width,height);
-        add(comboBox);
+        setBounds(x, y, width, height);
     }
 }
