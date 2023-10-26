@@ -3,6 +3,7 @@ package telas;
 import classes.Aplicativo;
 import classes.Lanche;
 import classes.Restaurante;
+import classes.Usuario;
 import components.*;
 
 import javax.swing.*;
@@ -87,6 +88,7 @@ public class Pedido extends Frame {
 
     private void calcularValorTotal() {
         String produtoSelecionado = (String) comboBoxProdutos.getSelectedItem();
+
         Integer quantidadeSelecionada = (Integer) comboBoxQtd.getSelectedItem();
 
         if (produtoSelecionado != null && quantidadeSelecionada != null) {
@@ -99,6 +101,15 @@ public class Pedido extends Frame {
         }
     }
     private void exibirComprovante(){
-
+        ArrayList<Usuario> usuarios = Aplicativo.getUsuarios();
+        ArrayList<Lanche> produto = Aplicativo.getLanches();
+        System.out.println("NOTA FISCAL ELETRÔNICA");
+        System.out.println("----------------------");
+        System.out.println("NOME COMPRADOR: "+usuarios.get(0).getNome());
+        System.out.println("CPF COMPRADOR: "+usuarios.get(0).getCpf());
+        System.out.println("PRODUTO COMPRADO: "+produto.get(0).getNome());
+        System.out.println("VALOR UNITÁRIO: R$ "+produto.get(0).getPreco());
+        System.out.println("QUANTIDADE: "+comboBoxQtd.getSelectedItem());
+        System.out.println("VALOR TOTAL: R$ "+valorTotal.getText());
     }
 }
